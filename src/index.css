@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  background-color: #F9FAFB;
+  color: #111827;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Hide scrollbars on horizontal chip rows but keep them scrollable */
+.chip-scroll::-webkit-scrollbar {
+  height: 0px;
+}
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #print-invoice, #print-invoice * {
+    visibility: visible;
+  }
+  #print-invoice {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+}
